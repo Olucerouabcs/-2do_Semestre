@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FillText</title>
+    <title>Trabajos</title>
 </head>
 <body>
+    
     <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
-    <img hidden  id="imagen" src="Black_Eagles.png" alt="la imagen" width="220" height="277" >
-    <script>
-        var canvas = document.getElementById('myCanvas'); //var ctx = canvas.getContext('2d');
+    
+       <script>
+        var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
+        var color = "rgba(125,136,229,0.5)";
+        var figura = true;
+
+        ctx.fillStyle = color;
+
+        canvas.addEventListener("click", (event) => {
+            
+            
+                ctx.beginPath();
+                ctx.arc(event.layerX,event.layerY,50,0,2 * Math.PI);
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+            
+            console.log("Hola")
+            console.log(event)
+            
+
+        })
+
+        
+
+
+
+
+
+
+
+
+        //<img hidden  id="imagen" src="Black_Eagles.png" alt="la imagen" width="220" height="277" >
 
         //ctx.fillStyle = "rgb(125,136,229)";
         //ctx.fillRect (10, 10, 110, 100);
@@ -67,10 +98,12 @@
         //ctx.fillStyle = grd2;
         //ctx.fillRect(10,10,200,200)
 
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        var img = document.getElementById("imagen");
-        ctx.drawImage(img, 100, 20);
+        //var c = document.getElementById("myCanvas");
+        //var ctx = c.getContext("2d");
+        //var img = document.getElementById("imagen");
+        //ctx.drawImage(img, 100, 20);
+
+        
 
 
     </script>
