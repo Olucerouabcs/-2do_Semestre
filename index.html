@@ -45,11 +45,19 @@
         //ctx.stroke();
         //ctx.closePath();
 
-        ctx.fillStylet="red";
-        ctx.font="40px Arial";
-        ctx.fillText("Hola mundo",60,45);
+        //ctx.fillStylet="red";
+        //ctx.font="40px Arial";
+        //ctx.fillText("Hola mundo",60,45);
 
-        ctx.strokeText("Hola mundo",65,50);
+        //ctx.strokeText("Hola mundo",65,50);
+
+        var grd = ctx.createLinearGradient(10,100,10,200);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(0.5,"orange");
+        grd.addColorStop(1,"yellow");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(20,70,400,200)
 
 
     </script>
