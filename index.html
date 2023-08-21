@@ -14,6 +14,7 @@
         var ctx = canvas.getContext("2d");
         var color = "rgba(125,136,229,0.5)";
         var figura = true;
+        var press =false;
 
         ctx.fillStyle = color;
 
@@ -60,13 +61,26 @@
 
         })
 
+        //mouse para las estela
+
         canvas.addEventListener("mousemove",(event) =>{
             console.log("mousemovee");
-            ctx.beginPath();
-            ctx.arc(event.layerX,event.layerY,2,0,2 * Math.PI);
-            ctx.fill();
-            ctx.stroke();
-            ctx.closePath();
+            if(press){
+                ctx.beginPath();
+                ctx.arc(event.layerX,event.layerY,2,0,2 * Math.PI);
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+            }
+            
+        })
+
+        canvas.addEventListener("mousedown", (event) =>{
+            press=true;
+        })
+
+        canvas.addEventListener("mouseup", (event) =>{
+            press=false;
         })
 
 
