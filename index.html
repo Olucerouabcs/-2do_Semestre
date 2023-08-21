@@ -7,8 +7,9 @@
 </head>
 <body>
     <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
+    <img hidden  id="imagen" src="Black_Eagles.png" alt="la imagen" width="220" height="277" >
     <script>
-        var canvas = document.getElementById('myCanvas'); var ctx = canvas.getContext('2d');
+        var canvas = document.getElementById('myCanvas'); //var ctx = canvas.getContext('2d');
         var ctx = canvas.getContext("2d");
 
         //ctx.fillStyle = "rgb(125,136,229)";
@@ -59,14 +60,19 @@
         //ctx.fillStyle = grd;
         //ctx.fillRect(20,70,400,200)
 
-        var grd2 = ctx.createRadialGradient(100,100,20,100,100,100);
-        grd2.addColorStop(0,"blue");
-        grd2.addColorStop(1,"green");
+        //var grd2 = ctx.createRadialGradient(100,100,20,100,100,100);
+        //grd2.addColorStop(0,"blue");
+        //grd2.addColorStop(1,"green");
 
-        ctx.fillStyle = grd2;
-        ctx.fillRect(10,10,200,200)
+        //ctx.fillStyle = grd2;
+        //ctx.fillRect(10,10,200,200)
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("imagen");
+        ctx.drawImage(img, 100, 20);
 
 
     </script>
 </body>
-</html>s
+</html>
