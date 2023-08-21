@@ -60,6 +60,14 @@
 
         })
 
+        canvas.addEventListener("mousemove",(event) =>{
+            console.log("mousemovee");
+            ctx.beginPath();
+            ctx.arc(event.layerX,event.layerY,2,0,2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+        })
 
 
 
