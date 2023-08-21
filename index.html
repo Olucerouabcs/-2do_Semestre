@@ -19,13 +19,16 @@
 
         canvas.addEventListener("click", (event) => {
             
-            
+            if(figura){
                 ctx.beginPath();
                 ctx.arc(event.layerX,event.layerY,50,0,2 * Math.PI);
                 ctx.fill();
                 ctx.stroke();
                 ctx.closePath();
-            
+            }else{
+                ctx.fillRect (event.layerX-50,event.layerY-50, 100, 100);
+                ctx.strokeRect(event.layerX-50,event.layerY-50, 100, 100);
+            }
             console.log("Hola")
             console.log(event)
             
@@ -49,7 +52,13 @@
             return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
         }
 
+        //mouse out cambiar forma
 
+        canvas.addEventListener("mouseout",(event) =>{
+
+            figura=!figura
+
+        })
 
 
 
