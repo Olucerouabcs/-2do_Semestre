@@ -19,9 +19,25 @@
 
         document.addEventListener("keydown",(e)=>{
             console.log(e);
-
-
             
+            switch(e.keyCode){
+                case 87:
+                    y-=10;
+                break;
+                case 83:
+                    y+=10;
+                break;
+                case 68:
+                    x+=10;
+                break;
+                case 65:
+                    x-=10;
+                break;
+
+            }
+            
+
+            /*
             var test = Math.floor(Math.random()*950);
 
             x=test;
@@ -29,7 +45,7 @@
             var test = Math.floor(Math.random()*450);
 
             y=test;
-            
+            */
             color = randomRGB();
             ctx.fillStyle=color;
             
@@ -44,6 +60,7 @@
 
         function repaint(){
             
+
 
             color = randomRGB();
             ctx.fillStyle=color;
