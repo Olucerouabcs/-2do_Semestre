@@ -12,6 +12,47 @@
        <script>
         var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
+        var x = 400;
+        var y = 150;
+        var color = "red";
+        ctx.fillStyle=color;
+
+        document.addEventListener("keydown",(e)=>{
+            console.log(e);
+
+
+            
+            var test = Math.floor(Math.random()*950);
+
+            x=test;
+
+            var test = Math.floor(Math.random()*450);
+
+            y=test;
+            
+            color = randomRGB();
+            ctx.fillStyle=color;
+            
+
+            repaint();
+
+
+        })
+
+        ctx.fillRect(x,y, 100, 100);
+        ctx.strokeRect(x,y, 100, 100);
+
+        function repaint(){
+            
+
+            color = randomRGB();
+            ctx.fillStyle=color;
+
+            ctx.fillRect(x,y, 100, 100);
+            ctx.strokeRect(x,y, 100, 100);
+
+        }
+        /*
         var color = "rgba(125,136,229,0.5)";
         var figura = true;
         var press =false;
@@ -45,6 +86,7 @@
             console.log("mousever")
             
         })
+*/
 
         function randomRGB() {
             var x = Math.floor(Math.random() * 256);
@@ -52,7 +94,7 @@
             var z = Math.floor(Math.random() * 256);
             return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
         }
-
+/*
         //mouse out cambiar forma
 
         canvas.addEventListener("mouseout",(event) =>{
@@ -82,7 +124,8 @@
         canvas.addEventListener("mouseup", (event) =>{
             press=false;
         })
-
+        
+*/
 
 
 
