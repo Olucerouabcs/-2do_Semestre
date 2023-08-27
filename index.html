@@ -7,11 +7,205 @@
 </head>
 <body>
     
-    <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="1000" height="800" style="border:2px solid #000000;"></canvas>
     
        <script>
         var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
+
+        
+        ctx.fillStyle = "rgb(252,184,138)";
+
+        //ctx.beginPath();
+
+        //ctx.closePath();
+        ctx.beginPath();
+        ctx.arc(500,100,70,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillRect(472.5,155,60,40);
+        
+        //Negro
+        ctx.fillStyle = "rgb(46,26,25)";
+
+        ctx.beginPath();
+        ctx.arc(470,80,10,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(530,80,10,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        
+        //Negro
+        ctx.fillStyle = "rgba(46,26,25,0.5)";
+        ctx.beginPath();
+        ctx.arc(500,100,70,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        
+        //piel
+        ctx.fillStyle = "rgb(252,184,138)";
+
+        ctx.beginPath();
+        ctx.arc(500,100,50,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        
+        //Negro
+        ctx.fillStyle = "rgb(46,26,25)";
+        
+        ctx.beginPath();
+        ctx.arc(500,125,20,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        
+        //Negro
+        ctx.fillStyle = "rgba(46,26,25,0.5)";
+
+        ctx.beginPath();
+        ctx.arc(500,115,20,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        //piel
+        ctx.fillStyle = "rgb(252,184,138)";
+
+        ctx.beginPath();
+        ctx.arc(565,100,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(435,100,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = "rgb(252,184,138)";
+        ctx.beginPath();
+        ctx.arc(500,120,20,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        //Negro
+        ctx.fillStyle = "rgb(46,26,25)";
+
+        ctx.beginPath();
+        ctx.arc(500,30,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(520,35,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(540,45,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(560,65,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        // el otro pelo
+
+        ctx.beginPath();
+        ctx.arc(480,35,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(460,45,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(440,65,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        
+        //Camisa
+        ctx.fillStyle = "rgb(15,219,162)";
+        ctx.fillRect(402,190,200,250);
+
+        //piel 
+        ctx.fillStyle = "rgb(252,184,138)";
+        ctx.beginPath();
+        ctx.arc(502,190,30,0,1 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        //Camisa 2
+        ctx.fillStyle = "rgb(12,186,162)";
+        ctx.beginPath();
+        ctx.moveTo(380,190);
+        ctx.lineTo(410,190);
+        ctx.lineTo(340,410);
+        ctx.lineTo(300,410);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.moveTo(600,190);
+        ctx.lineTo(630,190);
+        ctx.lineTo(660,410);
+        ctx.lineTo(620,410);
+        ctx.fill();
+        ctx.closePath();
+
+        //Pantalones
+        ctx.fillStyle = "rgb(0,31,217)";
+        ctx.beginPath();
+        ctx.moveTo(402,410);
+        ctx.lineTo(602,410);
+        ctx.lineTo(602,702);
+        ctx.lineTo(602,710);
+        ctx.lineTo(570,710);
+        ctx.lineTo(520,490);
+        ctx.lineTo(490,490);
+        ctx.lineTo(440,710);
+        ctx.lineTo(402,710);
+        ctx.fill();
+        ctx.closePath();
+
+        //piel 
+        ctx.fillStyle = "rgb(252,184,138)";
+        ctx.beginPath();
+        ctx.arc(320,420,30,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(640,420,30,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        
+        //Tenis
+        ctx.fillStyle = "black";
+        ctx.fillRect(570,710,70,40);
+        ctx.beginPath();
+        ctx.arc(640,730,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillRect(372,710,70,40);
+        ctx.beginPath();
+        ctx.arc(372,730,20,0,2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+
+        
+        
+        
+        /*
         var x = 400;
         var y = 150;
         var color = "red";
@@ -37,7 +231,7 @@
             }
             
 
-            /*
+            
             var test = Math.floor(Math.random()*950);
 
             x=test;
@@ -45,7 +239,7 @@
             var test = Math.floor(Math.random()*450);
 
             y=test;
-            */
+            
             color = randomRGB();
             ctx.fillStyle=color;
             
@@ -70,6 +264,7 @@
             ctx.strokeRect(x,y, 100, 100);
 
         }
+        */
         /*
         var color = "rgba(125,136,229,0.5)";
         var figura = true;
@@ -106,12 +301,12 @@
         })
 */
 
-        function randomRGB() {
-            var x = Math.floor(Math.random() * 256);
-            var y = Math.floor(Math.random() * 256);
-            var z = Math.floor(Math.random() * 256);
-            return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
-        }
+        //function randomRGB() {
+        //    var x = Math.floor(Math.random() * 256);
+        //    var y = Math.floor(Math.random() * 256);
+        //    var z = Math.floor(Math.random() * 256);
+        //    return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
+        //}
 /*
         //mouse out cambiar forma
 
@@ -176,6 +371,7 @@
         //ctx.closePath();
 
         //ctx.fillStyle = "green";
+        
 
         //ctx.beginPath();
         //ctx.arc(300,400,50,0,2 * Math.PI);
