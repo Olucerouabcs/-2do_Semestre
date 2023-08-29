@@ -12,6 +12,164 @@
        <script>
         var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
+
+
+        var grd2 = ctx.createLinearGradient(400,300,400,400);
+        grd2.addColorStop(0,"rgb(44,68,104)");
+        grd2.addColorStop(0.5,"rgb(113,141,180)");
+        grd2.addColorStop(1,"rgb(83,115,162)");
+        ctx.fillStyle = grd2;
+        ctx.fillRect(0,0,1000,500)
+
+
+        var grd = ctx.createLinearGradient(90,90,100,300);
+        grd.addColorStop(0,"rgb(228,204,180)");
+        grd.addColorStop(0.5,"rgba(238,163,90)");
+        grd.addColorStop(1,"rgb(228,204,180)");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,1000,350)
+
+         
+        ctx.fillStyle = "rgb(140,112,91)";
+        ctx.beginPath();
+        ctx.moveTo(300,350);
+        ctx.lineTo(390,350);
+        ctx.lineTo(400,300);
+        ctx.lineTo(410,270);
+        ctx.lineTo(420,250);
+        ctx.lineTo(430,240);
+        ctx.lineTo(440,235);
+        ctx.lineTo(450,230);
+        ctx.lineTo(460,230);
+        ctx.lineTo(470,225);
+        ctx.lineTo(480,220);
+        ctx.lineTo(490,220);
+        ctx.lineTo(500,220);
+        ctx.lineTo(520,225);
+        ctx.lineTo(530,230);
+        ctx.lineTo(540,240);
+        ctx.lineTo(550,250);
+        ctx.lineTo(550,250);
+        ctx.lineTo(550,290);
+        ctx.lineTo(550,330);
+        ctx.lineTo(540,330);
+        ctx.lineTo(530,340);
+        ctx.lineTo(520,340);
+        ctx.lineTo(510,350);
+        ctx.lineTo(520,350);
+        ctx.lineTo(560,350);
+        ctx.lineTo(800,350);
+
+        ctx.fillStyle = "rgb(125,100,81)";
+        ctx.lineTo(800,380);
+        ctx.lineTo(800,390);
+        ctx.lineTo(850,400);
+        ctx.lineTo(870,400);
+        ctx.lineTo(890,410);
+        ctx.lineTo(950,420);
+        ctx.lineTo(1000,400);
+
+
+
+        ctx.fillStyle = "rgb(140,112,91)";
+        //Superior
+        ctx.lineTo(1000,0);
+        ctx.lineTo(580,0);
+        ctx.lineTo(570,0);
+        ctx.lineTo(550,10);
+        ctx.lineTo(540,10);
+        ctx.lineTo(530,15);
+        ctx.lineTo(510,25);
+        ctx.lineTo(500,55);
+        ctx.lineTo(490,100);
+        ctx.lineTo(490,100);
+        ctx.lineTo(450,100);
+        ctx.lineTo(405,50);
+        ctx.lineTo(380,60);
+        ctx.lineTo(370,150);
+        ctx.lineTo(330,190);
+        ctx.lineTo(300,290);
+    
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = "rgb(125,100,81)";
+        ctx.beginPath();
+        ctx.moveTo(300,350);
+        ctx.lineTo(330,350);
+        ctx.lineTo(370,350);
+        ctx.lineTo(390,350);
+        ctx.lineTo(390,330);
+        ctx.lineTo(300,330);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = "rgb(125,100,81)";
+
+        ctx.beginPath();
+        ctx.moveTo(520,350);
+        ctx.lineTo(520,350);
+        ctx.lineTo(520,340);
+        ctx.lineTo(530,340);
+        ctx.lineTo(540,330);
+        ctx.lineTo(550,330);
+        ctx.lineTo(660,330);
+        ctx.lineTo(760,330);
+        ctx.lineTo(800,350);
+        ctx.lineTo(800,380);
+        ctx.lineTo(800,390);
+        ctx.lineTo(850,400);
+        ctx.lineTo(870,400);
+        ctx.lineTo(890,410);
+        ctx.lineTo(950,420);
+        ctx.lineTo(1100,390);
+        ctx.fill();
+        ctx.closePath();
+
+
+        ctx.strokeStyle = "rgb(140,112,91)";
+
+        ctx.beginPath();
+        ctx.moveTo(801,370);
+        ctx.lineTo(801,200);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.moveTo(801,200);
+        ctx.lineTo(1000,0);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.fillStyle = "rgb(140,112,91)";
+
+        ctx.beginPath();
+        ctx.moveTo(0,50);
+        ctx.lineTo(10,70);
+        ctx.lineTo(20,80);
+        ctx.lineTo(30,90);
+        ctx.lineTo(35,100);
+        ctx.lineTo(40,110);
+        ctx.lineTo(50,130);
+        ctx.lineTo(60,150);
+        ctx.lineTo(70,170);
+        ctx.lineTo(80,200);
+        ctx.lineTo(85,210);
+        ctx.lineTo(90,350);
+        ctx.lineTo(0,350);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = "rgb(125,100,81)";
+        ctx.beginPath();
+        ctx.moveTo(0,350);
+        ctx.lineTo(88,350);
+        ctx.lineTo(88,330);
+        ctx.lineTo(0,330);
+        ctx.fill();
+        ctx.closePath();
+        
+        /*
         var x = 400;
         var y = 150;
         var color = "red";
@@ -38,6 +196,7 @@
                     dir=4;
                     //x-=10;
                 break;
+
 
             }
             
@@ -110,7 +269,7 @@
             return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
         }
 
-        /*
+        
         
         ctx.fillStyle = "rgb(252,184,138)";
 
