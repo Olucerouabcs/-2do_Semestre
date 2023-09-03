@@ -10,12 +10,14 @@
     <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
     
        <script>
-        var canvas = document.getElementById('myCanvas'); 
+         var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
         var ctx2 = canvas.getContext("2d");
+        var ctx3 = canvas.getContext("2d");
         var x = 400;
         var y = 150;
         var x2=800,y2=200;
+        var x3=100,y3=100;
         var color = "red";
         var dir=0;
         ctx.fillStyle=color;
@@ -27,19 +29,19 @@
             switch(e.keyCode){
                 case 87:
                     dir=1;
-                    //y-=10;
+                    direccion="arriba";
                 break;
                 case 83:
                     dir=2;
-                    //y+=10;
+                    direccion="abajo";
                 break;
                 case 68:
                     dir=3;
-                    //x+=10;
+                    direccion="derecha";
                 break;
                 case 65:
                     dir=4;
-                    //x-=10;
+                    direccion="izquierda";
                 break;
 
             }
@@ -47,9 +49,6 @@
             color = randomRGB();
             ctx.fillStyle=color;
             
-
-            //update();
-
 
         })
 
@@ -70,29 +69,46 @@
             ctx.strokeRect(x,y, 100, 100);
 
             randomSquare();
+            muro();
 
 
         }
 
         function update(){
-            switch(dir){
-                case 1:
-                    y-=5;
-                    if(y< -50){y=550}
-                break;
-                case 2:
-                    y+=5;
-                    if(y>550){y=-50}
-                break;
-                case 3:
-                    x+=5;
-                    if(x>1050){x=-50}
-                break;
-                case 4:
-                    x-=5;
-                    if(x < -50){x=1050}
-                break;
+            console.log("dir " + dir);
 
+            var auxX = x;
+            var auxY = y;
+
+            switch (dir) {
+                case 1:
+                    y -= 5;
+                    if (colisionMuro(ctx, ctx3)) {
+                        y = auxY; 
+                    }
+                    if (y < -50) { y = 550 }
+                    break;
+                case 2:
+                    y += 5;
+                    if (colisionMuro(ctx, ctx3)) {
+                        y = auxY; 
+                    }
+                    if (y > 550) { y = -50 }
+                    break;
+                case 3:
+                    x += 5;
+                    if (colisionMuro(ctx, ctx3)) {
+                        x = auxX; 
+                    }
+                    if (x > 1050) { x = -50 }
+                    break;
+                case 4:
+                    x -= 5;
+                    if (colisionMuro(ctx, ctx3)) {
+                        x = auxX; 
+                    }
+                    if (x < -50) { x = 1050 }
+                    break;
             }
 
             repaint();
@@ -108,6 +124,8 @@
                     window.setTimeout(callback, 17);
                 };
         }());
+        
+
 
         window.requestAnimationFrame(update);
 
@@ -119,6 +137,10 @@
             return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
         }
 
+        function muro(){
+            ctx3.fillRect(x3,y3, 500, 20);
+            ctx3.strokeRect(x3,y3, 500, 20);
+        }
 
         function randomSquare(){
             if(colision(ctx, ctx2)){
@@ -133,14 +155,24 @@
 
         function colision({ ctx, ctx2 }) {
             return (
-                x + 100 >= x2 && // box1 right collides with box2 left
-                x2 + 100 >= x && // box2 right collides with box1 left
-                y + 100 >= y2 && // box1 bottom collides with box2 top
-                y2 + 100 >= y // box1 top collides with box2 bottom
+                x + 100 >= x2 && 
+                x2 + 100 >= x && 
+                y + 100 >= y2 && 
+                y2 + 100 >= y 
+            )
+        }
+
+        function colisionMuro({ ctx, ctx3 }) {
+            return (
+                x + 100 >= x3 && 
+                x3 + 500 >= x && 
+                y + 100 >= y3 && 
+                y3 + 20 >= y 
             )
         }
 
         /*
+        
         var canvas = document.getElementById('myCanvas'); 
         var ctx = canvas.getContext("2d");
 
