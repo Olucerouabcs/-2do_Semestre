@@ -35,6 +35,13 @@
         var dir = 0;
         ctx.fillStyle = color;
         var pause=false;
+        let img = new Image();
+        let img2 = new Image();
+        let audio = new Audio();
+        var score=0,velocidad=5;
+        img.src = 'entrega-de-comida.png';
+        img2.src = 'paquete-de-comida.png';
+        audio.src = 'sujetar-agrrar-2.mp3';
 
         var muros = [];
         muros.push(new Rectángulo(100, 100, 500, 20, ctx));
@@ -73,9 +80,6 @@
             ctx.fillStyle = color;
         });
 
-        ctx.fillRect(x, y, 100, 100);
-        ctx.strokeRect(x, y, 100, 100);
-
         function repaint() {
             if(!pause){
                 ctx.fillStyle = "white";
@@ -84,8 +88,10 @@
                 color = randomRGB();
                 ctx.fillStyle = color;
 
-                ctx.fillRect(x, y, 100, 100);
-                ctx.strokeRect(x, y, 100, 100);
+                ctx.drawImage(img, x, y, 100, 100); 
+                ctx.font = "20px Arial";
+                ctx.fillStyle = "black";
+                ctx.fillText("Puntuación: " + score, 10, 30);
 
                 randomSquare();
                 muro();
@@ -108,28 +114,28 @@
 
                 switch (dir) {
                     case 1:
-                        y -= 5;
+                        y -= velocidad;
                         if (colisionMuro()) {
                             y = auxY;
                         }
                         if (y < -50) { y = 550 }
                         break;
                     case 2:
-                        y += 5;
+                        y += velocidad;
                         if (colisionMuro()) {
                             y = auxY;
                         }
                         if (y > 550) { y = -50 }
                         break;
                     case 3:
-                        x += 5;
+                        x += velocidad;
                         if (colisionMuro()) {
                             x = auxX;
                         }
                         if (x > 1050) { x = -50 }
                         break;
                     case 4:
-                        x -= 5;
+                        x -= velocidad;
                         if (colisionMuro()) {
                             x = auxX;
                         }
@@ -171,9 +177,12 @@
                 var testY = Math.floor(Math.random() * 400);
                 x2 = testX;
                 y2 = testY;
+                audio.play();
+                score++; 
+                velocidad += 1;
+               
             }
-            ctx.fillStyle = "black";
-            ctx.fillRect(x2, y2, 100, 100);
+            ctx.drawImage(img2, x2, y2, 100, 100); 
         }
 
         function colision() {
