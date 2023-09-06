@@ -7,337 +7,9 @@
 </head>
 <body>
     
-    <canvas id="myCanvas" width="1450" height="700" style="border:2px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="1000" height="500" style="border:2px solid #000000;"></canvas>
     
     <script>
-
-        var canvas = document.getElementById('myCanvas'); 
-        var ctx = canvas.getContext("2d");
-
-        
-        ctx.fillStyle = "rgb(179,238,254)";
-        ctx.fillRect(0,0,1500,800);
-
-        ctx.fillStyle = "rgb(246,198,184)";
-        ctx.fillRect(0,605,1500,800);
-
-        ctx.fillStyle = "black";//sombra arbustos
-
-        ctx.beginPath();
-        ctx.arc(130,550,47,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(90,580,47,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(150,580,47,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(65,129,36)";//arbustos
-
-        ctx.beginPath();
-        ctx.arc(130,550,45,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(90,580,45,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(150,580,45,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "black";
-        ctx.fillRect(0,607,1500,27);
-
-        ctx.fillStyle = "rgb(238,154,101)";
-        ctx.fillRect(0,605,1500,27);
-
-        ctx.fillStyle ="black";
-        ctx.fillRect(445,295,210,310);
-
-        ctx.fillRect(550,330,150,275);
-
-        ctx.fillStyle = "rgb(132,192,255)";//rectangulo azul
-        ctx.fillRect(450,300,200,300);
-
-        ctx.fillStyle = "rgb(181,191,192)";//tuercas
-        ctx.beginPath();
-        ctx.arc(465,315,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(635,315,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(635,585,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.fillStyle ="black";
-        ctx.fillRect(295,395,210,210);
-
-        ctx.fillRect(400,430,130,175);
-
-        ctx.fillStyle = "rgb(255,195,184)";//rectangulo rosa
-        ctx.fillRect(300,400,200,200);
-
-        ctx.fillStyle = "rgb(181,191,192)";//tuercas
-        ctx.beginPath();
-        ctx.arc(315,415,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(485,415,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(315,585,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(485,585,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.fillStyle ="black";
-        ctx.fillRect(895,465,180,140);
-
-        ctx.fillStyle = "rgb(25,122,16)";//tuberia
-        ctx.fillRect(900,470,170,130);
-
-        ctx.fillStyle = "rgb(22,108,14)";//primer otro verde de tuberia
-        ctx.fillRect(1000,400,70,200);
-
-        ctx.fillStyle = "rgb(20,95,13)";//segundo otro verde de tuberia
-        ctx.fillRect(1020,400,50,200);
-
-        ctx.fillStyle = "rgb(30,145,19)";//tercer otro verde de tuberia
-        ctx.fillRect(900,400,25,200);
-
-        ctx.fillStyle ="black";
-        ctx.fillRect(880,395,210,80);
-
-        ctx.fillStyle = "rgb(25,122,16)";//tuberia
-        ctx.fillRect(885,400,200,70);
-
-        ctx.fillStyle = "rgb(22,108,14)";//primer otro verde de tuberia
-        ctx.fillRect(1000,400,70,70);
-
-        ctx.fillStyle = "rgb(20,95,13)";//segundo otro verde de tuberia
-        ctx.fillRect(1020,400,65,70);
-
-        ctx.fillStyle = "rgb(30,145,19)";//tercer otro verde de tuberia
-        ctx.fillRect(885,400,40,70);
-
-        ctx.fillStyle ="black";
-        ctx.fillRect(1265,395,210,210);
-
-        ctx.fillStyle = "rgb(81,217,107)";//Cuadro verde
-        ctx.fillRect(1270,400,200,200);
-
-        ctx.fillStyle = "rgb(181,191,192)";//tuercas
-        ctx.beginPath();
-        ctx.arc(1285,415,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(1455,415,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(1285,585,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(1455,585,12,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.fillStyle = "black";//Cubos sombras
-        ctx.fillRect(45,265,80,80);
-
-        ctx.fillRect(215,65,155,80);
-
-        ctx.fillRect(1345,165,80,80);
-
-        ctx.fillStyle = "rgb(255,144,97)";//Cubos
-        ctx.fillRect(50,270,70,70);
-
-        ctx.fillRect(220,70,70,70);
-        ctx.fillRect(295,70,70,70);
-
-        ctx.fillRect(1350,170,70,70);
-
-        ctx.fillStyle = "black";//tuercas de cubos
-        ctx.beginPath();
-        ctx.arc(55,275,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(55,335,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(115,275,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(115,335,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        //Cubo 2
-
-        ctx.beginPath();
-        ctx.arc(225,75,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(225,135,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(285,75,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(285,135,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-         //Cubo 3
-        ctx.beginPath();
-        ctx.arc(300,75,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(300,135,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(360,75,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(360,135,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        //Cubo 4
-        ctx.beginPath();
-        ctx.arc(1355,175,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(1355,235,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-        
-        ctx.beginPath();
-        ctx.arc(1415,175,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(1415,235,2,0,2 * Math.PI);
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(242,199,192)";//Interrogacion
-        ctx.fillRect(220, 80, 20, 20); 
-        ctx.fillRect(220, 100, 10, 30); 
-
-        ctx.beginPath();
-        ctx.arc(290, 95, 15, Math.PI * 1.5, Math.PI * 0.5, true); 
-        ctx.fill();
-
-        ctx.fillRect(1350, 180, 20, 20); 
-        ctx.fillRect(1350, 200, 10, 30); 
-        
-        ctx.beginPath();
-        ctx.arc(1420, 195, 15, Math.PI * 1.5, Math.PI * 0.5, true); 
-        ctx.fill();
-
-        ctx.fillStyle = 'green';//Planta
-        ctx.fillRect(965, 215 + 50, 20, 130);
-
-        ctx.fillStyle = 'red';
-        ctx.beginPath();
-        ctx.arc(975, 215, 50, 0, 2 * Math.PI, false);
-        ctx.fill();
-
-        ctx.fillStyle = "rgb(179,238,254)";
-        ctx.beginPath();
-        ctx.moveTo(910, 210);
-        ctx.lineTo(980, 210);
-        ctx.lineTo(910, 300);
-        ctx.fill();
-
-
-        /*
-        var x = 400;
-        var y = 150;
-        var x2 = 800, y2 = 200;
-        var color = "red";
-        var dir = 0;
-        ctx.fillStyle = color;
-
-
         class Rectángulo {
             constructor(x, y, width, height, ctx) {
                 this.x = x;
@@ -354,6 +26,16 @@
             }
         }
 
+        var canvas = document.getElementById('myCanvas'); 
+        var ctx = canvas.getContext("2d");
+        var x = 400;
+        var y = 150;
+        var x2 = 800, y2 = 200;
+        var color = "red";
+        var dir = 0;
+        ctx.fillStyle = color;
+        var pause=false;
+
         var muros = [];
         muros.push(new Rectángulo(100, 100, 500, 20, ctx));
         muros.push(new Rectángulo(100, 350, 500, 20, ctx));
@@ -362,23 +44,30 @@
             console.log(e);
 
             switch (e.keyCode) {
-                case 87:
-                    dir = 1;
-                    direccion = "arriba";
-                    break;
-                case 83:
-                    dir = 2;
-                    direccion = "abajo";
-                    break;
-                case 68:
-                    dir = 3;
-                    direccion = "derecha";
-                    break;
-                case 65:
-                    dir = 4;
-                    direccion = "izquierda";
-                    break;
+        case 87:
+            if (!pause) { 
+                dir = 1;
             }
+            break;
+        case 83:
+            if (!pause) { 
+                dir = 2;
+            }
+            break;
+        case 68:
+            if (!pause) { 
+                dir = 3;
+            }
+            break;
+        case 65:
+            if (!pause) { 
+                dir = 4;
+            }
+            break;
+        case 32:
+            pause = !pause;
+            break;
+    }
 
             color = randomRGB();
             ctx.fillStyle = color;
@@ -388,56 +77,66 @@
         ctx.strokeRect(x, y, 100, 100);
 
         function repaint() {
-            ctx.fillStyle = "white";
-            ctx.fillRect(0, 0, 1000, 500);
+            if(!pause){
+                ctx.fillStyle = "white";
+                ctx.fillRect(0, 0, 1000, 500);
 
-            color = randomRGB();
-            ctx.fillStyle = color;
+                color = randomRGB();
+                ctx.fillStyle = color;
 
-            ctx.fillRect(x, y, 100, 100);
-            ctx.strokeRect(x, y, 100, 100);
+                ctx.fillRect(x, y, 100, 100);
+                ctx.strokeRect(x, y, 100, 100);
 
-            randomSquare();
-            muro();
+                randomSquare();
+                muro();
+            }else{
+                ctx.fillStyle = "rgba(154,160,154,0.020)";
+                ctx.fillRect(0, 0, 1000, 500);
+
+                ctx.font = "40px Arial";
+                ctx.fillStyle = "black"; 
+                ctx.fillText("p "+"a "+"u "+"s "+"a", 1000/ 2 - 120, 500/ 2);
+            }
         }
 
         function update() {
-            console.log("dir " + dir);
+            if(pause==false){
+                console.log("dir " + dir);
 
-            var auxX = x;
-            var auxY = y;
+                var auxX = x;
+                var auxY = y;
 
-            switch (dir) {
-                case 1:
-                    y -= 5;
-                    if (colisionMuro()) {
-                        y = auxY;
-                    }
-                    if (y < -50) { y = 550 }
-                    break;
-                case 2:
-                    y += 5;
-                    if (colisionMuro()) {
-                        y = auxY;
-                    }
-                    if (y > 550) { y = -50 }
-                    break;
-                case 3:
-                    x += 5;
-                    if (colisionMuro()) {
-                        x = auxX;
-                    }
-                    if (x > 1050) { x = -50 }
-                    break;
-                case 4:
-                    x -= 5;
-                    if (colisionMuro()) {
-                        x = auxX;
-                    }
-                    if (x < -50) { x = 1050 }
-                    break;
+                switch (dir) {
+                    case 1:
+                        y -= 5;
+                        if (colisionMuro()) {
+                            y = auxY;
+                        }
+                        if (y < -50) { y = 550 }
+                        break;
+                    case 2:
+                        y += 5;
+                        if (colisionMuro()) {
+                            y = auxY;
+                        }
+                        if (y > 550) { y = -50 }
+                        break;
+                    case 3:
+                        x += 5;
+                        if (colisionMuro()) {
+                            x = auxX;
+                        }
+                        if (x > 1050) { x = -50 }
+                        break;
+                    case 4:
+                        x -= 5;
+                        if (colisionMuro()) {
+                            x = auxX;
+                        }
+                        if (x < -50) { x = 1050 }
+                        break;
+                }
             }
-
             repaint();
             window.requestAnimationFrame(update);
         }
@@ -500,660 +199,6 @@
             }
             return false;
         }
-
-
-  
-        
-        var canvas = document.getElementById('myCanvas'); 
-        var ctx = canvas.getContext("2d");
-
-
-        var grd2 = ctx.createLinearGradient(400,300,400,400);
-        grd2.addColorStop(0,"rgb(44,68,104)");
-        grd2.addColorStop(0.5,"rgb(113,141,180)");
-        grd2.addColorStop(1,"rgb(83,115,162)");
-        ctx.fillStyle = grd2;
-        ctx.fillRect(0,0,1000,500)
-
-
-        var grd = ctx.createLinearGradient(90,90,100,300);
-        grd.addColorStop(0,"rgb(228,204,180)");
-        grd.addColorStop(0.5,"rgba(238,163,90)");
-        grd.addColorStop(1,"rgb(228,204,180)");
-        ctx.fillStyle = grd;
-        ctx.fillRect(0,0,1000,350)
-
-         
-        ctx.fillStyle = "rgb(140,112,91)";
-        ctx.beginPath();
-        ctx.moveTo(300,350);
-        ctx.lineTo(390,350);
-        ctx.lineTo(400,300);
-        ctx.lineTo(410,270);
-        ctx.lineTo(420,250);
-        ctx.lineTo(430,240);
-        ctx.lineTo(440,235);
-        ctx.lineTo(450,230);
-        ctx.lineTo(460,230);
-        ctx.lineTo(470,225);
-        ctx.lineTo(480,220);
-        ctx.lineTo(490,220);
-        ctx.lineTo(500,220);
-        ctx.lineTo(520,225);
-        ctx.lineTo(530,230);
-        ctx.lineTo(540,240);
-        ctx.lineTo(550,250);
-        ctx.lineTo(550,250);
-        ctx.lineTo(550,290);
-        ctx.lineTo(550,330);
-        ctx.lineTo(540,330);
-        ctx.lineTo(530,340);
-        ctx.lineTo(520,340);
-        ctx.lineTo(510,350);
-        ctx.lineTo(520,350);
-        ctx.lineTo(560,350);
-        ctx.lineTo(800,350);
-
-        ctx.fillStyle = "rgb(125,100,81)";
-        ctx.lineTo(800,380);
-        ctx.lineTo(800,390);
-        ctx.lineTo(850,400);
-        ctx.lineTo(870,400);
-        ctx.lineTo(890,410);
-        ctx.lineTo(950,420);
-        ctx.lineTo(1000,400);
-
-
-
-        ctx.fillStyle = "rgb(140,112,91)";
-        //Superior
-        ctx.lineTo(1000,0);
-        ctx.lineTo(580,0);
-        ctx.lineTo(570,0);
-        ctx.lineTo(550,10);
-        ctx.lineTo(540,10);
-        ctx.lineTo(530,15);
-        ctx.lineTo(510,25);
-        ctx.lineTo(500,55);
-        ctx.lineTo(490,100);
-        ctx.lineTo(490,100);
-        ctx.lineTo(450,100);
-        ctx.lineTo(405,50);
-        ctx.lineTo(380,60);
-        ctx.lineTo(370,150);
-        ctx.lineTo(330,190);
-        ctx.lineTo(300,290);
-    
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(125,100,81)";
-        ctx.beginPath();
-        ctx.moveTo(300,350);
-        ctx.lineTo(330,350);
-        ctx.lineTo(370,350);
-        ctx.lineTo(390,350);
-        ctx.lineTo(390,330);
-        ctx.lineTo(300,330);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(125,100,81)";
-
-        ctx.beginPath();
-        ctx.moveTo(520,350);
-        ctx.lineTo(520,350);
-        ctx.lineTo(520,340);
-        ctx.lineTo(530,340);
-        ctx.lineTo(540,330);
-        ctx.lineTo(550,330);
-        ctx.lineTo(660,330);
-        ctx.lineTo(760,330);
-        ctx.lineTo(800,350);
-        ctx.lineTo(800,380);
-        ctx.lineTo(800,390);
-        ctx.lineTo(850,400);
-        ctx.lineTo(870,400);
-        ctx.lineTo(890,410);
-        ctx.lineTo(950,420);
-        ctx.lineTo(1100,390);
-        ctx.fill();
-        ctx.closePath();
-
-
-        ctx.strokeStyle = "rgb(140,112,91)";
-
-        ctx.beginPath();
-        ctx.moveTo(801,370);
-        ctx.lineTo(801,200);
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.moveTo(801,200);
-        ctx.lineTo(1000,0);
-        ctx.stroke();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(140,112,91)";
-
-        ctx.beginPath();
-        ctx.moveTo(0,50);
-        ctx.lineTo(10,70);
-        ctx.lineTo(20,80);
-        ctx.lineTo(30,90);
-        ctx.lineTo(35,100);
-        ctx.lineTo(40,110);
-        ctx.lineTo(50,130);
-        ctx.lineTo(60,150);
-        ctx.lineTo(70,170);
-        ctx.lineTo(80,200);
-        ctx.lineTo(85,210);
-        ctx.lineTo(90,350);
-        ctx.lineTo(0,350);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(125,100,81)";
-        ctx.beginPath();
-        ctx.moveTo(0,350);
-        ctx.lineTo(88,350);
-        ctx.lineTo(88,330);
-        ctx.lineTo(0,330);
-        ctx.fill();
-        ctx.closePath();
-        
-        
-        var x = 400;
-        var y = 150;
-        var color = "red";
-        var dir=0;
-        ctx.fillStyle=color;
-
-        document.addEventListener("keydown",(e)=>{
-            console.log(e);
-            
-            switch(e.keyCode){
-                case 87:
-                    dir=1;
-                    //y-=10;
-                break;
-                case 83:
-                    dir=2;
-                    //y+=10;
-                break;
-                case 68:
-                    dir=3;
-                    //x+=10;
-                break;
-                case 65:
-                    dir=4;
-                    //x-=10;
-                break;
-
-
-            }
-            
-            color = randomRGB();
-            ctx.fillStyle=color;
-            
-
-            //update();
-
-
-        })
-
-        ctx.fillRect(x,y, 100, 100);
-        ctx.strokeRect(x,y, 100, 100);
-
-        function repaint(){
-            
-            ctx.fillStyle="white";
-            ctx.fillRect(0,0,1000,500);
-
-            color = randomRGB();
-            ctx.fillStyle=color;
-
-            ctx.fillRect(x,y, 100, 100);
-            ctx.strokeRect(x,y, 100, 100);
-
-        }
-
-        function update(){
-            switch(dir){
-                case 1:
-                    y-=10;
-                    if(y< -50){y=550}
-                break;
-                case 2:
-                    y+=10;
-                    if(y>550){y=-50}
-                break;
-                case 3:
-                    x+=10;
-                    if(x>1050){x=-50}
-                break;
-                case 4:
-                    x-=10;
-                    if(x < -50){x=1050}
-                break;
-
-            }
-
-            repaint();
-            window.requestAnimationFrame(update);
-
-        }
-        window.requestAnimationFrame = (function () {
-            return window.requestAnimationFrame ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame ||
-                function (callback) {
-                    window.setTimeout(callback, 17);
-                };
-        }());
-
-        window.requestAnimationFrame(update);
-
-
-        function randomRGB() {
-            var x = Math.floor(Math.random() * 256);
-            var y = Math.floor(Math.random() * 256);
-            var z = Math.floor(Math.random() * 256);
-            return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
-        }
-
-        
-        
-        ctx.fillStyle = "rgb(252,184,138)";
-
-        //ctx.beginPath();
-
-        //ctx.closePath();
-        ctx.beginPath();
-        ctx.arc(500,100,70,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillRect(472.5,155,60,40);
-        
-        //Negro
-        ctx.fillStyle = "rgb(46,26,25)";
-
-        ctx.beginPath();
-        ctx.arc(470,80,10,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(530,80,10,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        
-        //Negro
-        ctx.fillStyle = "rgba(46,26,25,0.5)";
-        ctx.beginPath();
-        ctx.arc(500,100,70,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-        
-        //piel
-        ctx.fillStyle = "rgb(252,184,138)";
-
-        ctx.beginPath();
-        ctx.arc(500,100,50,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-        
-        //Negro
-        ctx.fillStyle = "rgb(46,26,25)";
-        
-        ctx.beginPath();
-        ctx.arc(500,125,20,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-        
-        //Negro
-        ctx.fillStyle = "rgba(46,26,25,0.5)";
-
-        ctx.beginPath();
-        ctx.arc(500,115,20,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        //piel
-        ctx.fillStyle = "rgb(252,184,138)";
-
-        ctx.beginPath();
-        ctx.arc(565,100,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(435,100,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillStyle = "rgb(252,184,138)";
-        ctx.beginPath();
-        ctx.arc(500,120,20,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        //Negro
-        ctx.fillStyle = "rgb(46,26,25)";
-
-        ctx.beginPath();
-        ctx.arc(500,30,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(520,35,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(540,45,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(560,65,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        // el otro pelo
-
-        ctx.beginPath();
-        ctx.arc(480,35,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(460,45,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(440,65,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        
-        //Camisa
-        ctx.fillStyle = "rgb(15,219,162)";
-        ctx.fillRect(402,190,200,250);
-
-        //piel 
-        ctx.fillStyle = "rgb(252,184,138)";
-        ctx.beginPath();
-        ctx.arc(502,190,30,0,1 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        //Camisa 2
-        ctx.fillStyle = "rgb(12,186,162)";
-        ctx.beginPath();
-        ctx.moveTo(380,190);
-        ctx.lineTo(410,190);
-        ctx.lineTo(340,410);
-        ctx.lineTo(300,410);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.moveTo(600,190);
-        ctx.lineTo(630,190);
-        ctx.lineTo(660,410);
-        ctx.lineTo(620,410);
-        ctx.fill();
-        ctx.closePath();
-
-        //Pantalones
-        ctx.fillStyle = "rgb(0,31,217)";
-        ctx.beginPath();
-        ctx.moveTo(402,410);
-        ctx.lineTo(602,410);
-        ctx.lineTo(602,702);
-        ctx.lineTo(602,710);
-        ctx.lineTo(570,710);
-        ctx.lineTo(520,490);
-        ctx.lineTo(490,490);
-        ctx.lineTo(440,710);
-        ctx.lineTo(402,710);
-        ctx.fill();
-        ctx.closePath();
-
-        //piel 
-        ctx.fillStyle = "rgb(252,184,138)";
-        ctx.beginPath();
-        ctx.arc(320,420,30,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.beginPath();
-        ctx.arc(640,420,30,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-        
-        //Tenis
-        ctx.fillStyle = "black";
-        ctx.fillRect(570,710,70,40);
-        ctx.beginPath();
-        ctx.arc(640,730,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        ctx.fillRect(372,710,70,40);
-        ctx.beginPath();
-        ctx.arc(372,730,20,0,2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        */
-        
-        
-        
-        /*
-        var x = 400;
-        var y = 150;
-        var color = "red";
-        ctx.fillStyle=color;
-
-        document.addEventListener("keydown",(e)=>{
-            console.log(e);
-            
-            switch(e.keyCode){
-                case 87:
-                    y-=10;
-                break;
-                case 83:
-                    y+=10;
-                break;
-                case 68:
-                    x+=10;
-                break;
-                case 65:
-                    x-=10;
-                break;
-
-            }
-            
-
-            
-            var test = Math.floor(Math.random()*950);
-
-            x=test;
-
-            var test = Math.floor(Math.random()*450);
-
-            y=test;
-            
-            color = randomRGB();
-            ctx.fillStyle=color;
-            
-
-            repaint();
-
-
-        })
-
-        ctx.fillRect(x,y, 100, 100);
-        ctx.strokeRect(x,y, 100, 100);
-
-        function repaint(){
-            
-            ctx.fillStyle="white";
-            ctx.fillRect(0,0,1000,500);
-
-            color = randomRGB();
-            ctx.fillStyle=color;
-
-            ctx.fillRect(x,y, 100, 100);
-            ctx.strokeRect(x,y, 100, 100);
-
-        }
-        */
-        /*
-        var color = "rgba(125,136,229,0.5)";
-        var figura = true;
-        var press =false;
-
-        ctx.fillStyle = color;
-
-        canvas.addEventListener("click", (event) => {
-            
-            if(figura){
-                ctx.beginPath();
-                ctx.arc(event.layerX,event.layerY,50,0,2 * Math.PI);
-                ctx.fill();
-                ctx.stroke();
-                ctx.closePath();
-            }else{
-                ctx.fillRect (event.layerX-50,event.layerY-50, 100, 100);
-                ctx.strokeRect(event.layerX-50,event.layerY-50, 100, 100);
-            }
-            console.log("Hola")
-            console.log(event)
-            
-
-        })
-
-        //para mouse over cambiar color
-
-        canvas.addEventListener("mouseover", (event) => {
-            
-            color= randomRGB();
-            ctx.fillStyle = color;
-            console.log("mousever")
-            
-        })
-*/
-
-        //function randomRGB() {
-        //    var x = Math.floor(Math.random() * 256);
-        //    var y = Math.floor(Math.random() * 256);
-        //    var z = Math.floor(Math.random() * 256);
-        //    return "rgb(" + x + "," + y + "," + z + ", 0.5)"; 
-        //}
-/*
-        //mouse out cambiar forma
-
-        canvas.addEventListener("mouseout",(event) =>{
-
-            figura=!figura
-
-        })
-
-        //mouse para las estela
-
-        canvas.addEventListener("mousemove",(event) =>{
-            console.log("mousemovee");
-            if(press){
-                ctx.beginPath();
-                ctx.arc(event.layerX,event.layerY,2,0,2 * Math.PI);
-                ctx.fill();
-                ctx.stroke();
-                ctx.closePath();
-            }
-            
-        })
-
-        canvas.addEventListener("mousedown", (event) =>{
-            press=true;
-        })
-
-        canvas.addEventListener("mouseup", (event) =>{
-            press=false;
-        })
-        
-*/
-
-        //<img hidden  id="imagen" src="Black_Eagles.png" alt="la imagen" width="220" height="277" >
-
-        //ctx.fillStyle = "rgb(125,136,229)";
-        //ctx.fillRect (10, 10, 110, 100);
-
-        //ctx.fillStyle = "rgb(205,0,9)";
-        //ctx.fillRect (100, 90, 110, 100);
-
-        //ctx.fillStyle = "rgba(255,150,255,0.5)";
-        //ctx.fillRect (190, 170, 110, 100);
-
-        //ctx.beginPath();
-        //ctx.moveTo(400,20);
-        //ctx.lineTo(400,200)
-        //ctx.lineTo(585,200);
-        //ctx.fill();
-        //ctx.closePath();
-
-        //ctx.beginPath();
-        //ctx.moveTo(585,200);
-        //ctx.lineTo(800,350);
-        //ctx.stroke();
-        //ctx.closePath();
-
-        //ctx.fillStyle = "green";
-        
-
-        //ctx.beginPath();
-        //ctx.arc(300,400,50,0,2 * Math.PI);
-        //ctx.fill();
-        //ctx.closePath();
-
-        //ctx.beginPath();
-        //ctx.arc(410,400,50,0,2 * Math.PI);
-        //ctx.stroke();
-        //ctx.closePath();
-
-        //ctx.fillStylet="red";
-        //ctx.font="40px Arial";
-        //ctx.fillText("Hola mundo",60,45);
-
-        //ctx.strokeText("Hola mundo",65,50);
-
-        //var grd = ctx.createLinearGradient(10,100,10,200);
-        //grd.addColorStop(0,"red");
-        //grd.addColorStop(0.5,"orange");
-        //grd.addColorStop(1,"yellow");
-
-        //ctx.fillStyle = grd;
-        //ctx.fillRect(20,70,400,200)
-
-        //var grd2 = ctx.createRadialGradient(100,100,20,100,100,100);
-        //grd2.addColorStop(0,"blue");
-        //grd2.addColorStop(1,"green");
-
-        //ctx.fillStyle = grd2;
-        //ctx.fillRect(10,10,200,200)
-
-        //var c = document.getElementById("myCanvas");
-        //var ctx = c.getContext("2d");
-        //var img = document.getElementById("imagen");
-        //ctx.drawImage(img, 100, 20);
-
         
 
 
